@@ -1,0 +1,55 @@
+.footer{
+    border-top: 1px solid #6f6f6f;
+    color: aliceblue;
+    width: 100%;
+    background-color: var(--dark-gray);
+    text-align: center;
+    font-size: 1.2rem;
+}
+.footer_container {
+    padding: 2rem 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;    
+}
+.footer_links {
+    margin-top: auto;
+}
+.footer_contacts {
+    width: 33.3%;
+    font-size: 1rem;
+}
+
+.footer_contacts a, .footer_contacts p {
+    display: block;
+    padding-top: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+}
+.footer_nav 
+{
+    font-size: 1rem;
+    width: 30.3%;
+}
+.footer_nav a {
+    display: block;
+    padding-top: 1.5rem;
+    color: white;
+}
+.footer_links a {
+    font-size: 2.5rem;
+    margin-right: 3rem;
+    display: inline-block;
+    color: #ffffff;
+}
+a.fa-brands.fa-whatsapp.wats{
+    margin-right: 0;
+}
+.footer_personal-data {
+    width: 100%;
+    margin-top: 4rem;
+    order: 4;
+}
