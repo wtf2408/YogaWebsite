@@ -14,8 +14,10 @@
         width: 100%;
         text-align: center;
         transition: 0.3s;
+        padding: 2rem 0;
+        font-size: 1.2rem;
     }
-    .header_menu_link, .messengers{
+    .header_menu_link {
         display: block;
         margin: 0;
         padding: 1rem 0;
@@ -31,6 +33,12 @@
     }
     .header_menu_link::before {
         display: none;
+    }
+    .telegram {
+        font-size: 2rem
+    }
+    .whatsapp {
+        font-size: 2.2rem;
     }
     /*END MENU*/
 
@@ -69,13 +77,52 @@
     .direction {
         width: 70%;
     }
+    /* .direction_image {
+        height: 40%;
+    } */
     /*END DIRECTIONS*/
+
+    /*FOOTER*/
+    .footer_container {
+        flex-direction: column;
+    }
+    .footer_contacts, .footer_nav {
+        font-size: 1.1rem;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .footer_contacts h2, .footer_nav h2 {width: 100%;}
+    .footer_contacts a, .footer_contacts p
+    {
+        padding: 1rem 1rem 0 0;
+    }
+    .footer_nav {
+        text-align: left;
+        width: 100%;
+    }
+    .footer_nav a {
+        padding: 1rem 1rem 0 0;
+    }
+    .footer_links {
+        order: 3;
+        margin-top: 3rem;
+    }
+    /*END FOOTER*/
 }
 @media screen and (max-width:740px)
 {
     :root{
         --base-fs: 12px;
     }
+    /*HEADER*/
+    .messengers {
+        display: block;
+        margin: 0;
+        padding: 1rem 0;
+    }
+    /*END HEADER*/
     /*WELCOM*/
     .welcom_content {
         padding: 6rem 0;
@@ -89,19 +136,6 @@
     /*END DIRECTIONS*/
 
     /*FOOTER*/
-    .footer_links {
-        width: 100%;
-        margin-top: 2.5rem;
-        order: 3;
-    }
-    
-    .footer_nav, .footer_contacts
-    {
-        width: 50%;
-    }
-    .footer_personal-data {
-        margin-top: 2rem;
-    }
     /*END FOOTER*/
 
     
@@ -148,6 +182,8 @@
         text-align: center;
     }
     /*END TOURS*/
+    /*FOOTER*/
+    /*END FOOTER*/
 }
 @media screen and (max-width:540px)
 {
@@ -157,19 +193,44 @@
     .welcom_content{
         width: 100%;
     }
+    /*DIRECTIONS*/
+    .direction_sign-up{
+        margin: auto;
+    }
+    /*END DIRECTIONS*/
+    /*FOOTER*/
+    .footer_container {
+        padding: 6rem 2rem 3rem 2rem;  
+    }
+    /*END FOOTER*/
 
+}
+@media screen and (max-width:440px)
+{
+    :root {
+        --base-fs: 11px;
+    } 
      /*DIRECTIONS*/
      .direction {
         width: 100%;
     }
     .directions_content-width {
-        padding: 1rem;
+        padding: 3rem 1.5rem;
     }
     /*END DIRECTIONS*/
+    /*TEACHERS*/
     .teachers_container {
-        padding: 1.5rem;
+        padding: 3rem 1.5rem 4rem 1.5rem;
     }
+    /*END TEACHERS*/
+    /*TOURS*/
     .tours_container {
         padding: 2rem;
     }
+    /*END TOURS*/
+    /*FOOTER*/
+    .footer_container {
+        padding: 6rem 1.5rem 2rem 1.5rem;  
+    }   
+    /*END FOOTER*/
 }
