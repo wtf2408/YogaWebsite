@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--SEO-->
+    <title>Йога в Пятигорске Yoga Masterskya</title>
+    <meta name="description" 
+          content="Студия йоги в Пятигорске, широкий спектор направлений: йога Айенгара, ха-тха йога, тантра, стретчинг">
+    <meta name="keywords" content="Йога в Пятигорске, йога Пятигорск, йога кмв, йога Айенгара, тантра Пятигорск, йога Мастерская, yoga Masterskya, ха-тха йога Пятигорск, стретчинг Пятигорск" />
+    <!--SEO-->
+    
+
     <!--styles-->
     <link rel="stylesheet" href="styles/default.css">
     <link rel="stylesheet" href="styles/header.css">
@@ -9,15 +18,18 @@
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/mediaqueries.css">
     <!--styles-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Yoga Nadya</title>
 
+    <!--Яндеск карты API-->
+    <script src="https://api-maps.yandex.ru/2.1?apikey=cd46804d-f474-40fa-be86-c4fb4252899f&lang=ru_RU" 
+            type="text/javascript"></script>
+    <!--Яндеск карты API-->
+    <link rel="icon" href="./favicon.ico" type="text/x-icon">
 </head>
 <body>
     <header class="header">
         <div class="header_container">
 
-            <p class="header_logo">Yoga Nadya</p>
+            <p class="header_logo"><span class="upper">YOGA</span> master<span class="upper">SKY</span>a</p>
 
             <nav class="header_menu">
                 <a href="#directions" class="header_menu_link">НАПРАВЛЕНИЯ<a>
@@ -44,13 +56,17 @@
                 <div class="welcom_container">
                     <div class="welcom_content">
                         <h1 class="welcom_title">
-                            Студия йоги <br> Yoga Nadya
+                            Студия йоги в Пятигорске
+                            <!-- <span class="upper">YOGA</span><br>master<span class="upper">SKY</span>a -->
                         </h1>
                         <p class="welcom_description">
-                            Lorem ipsum dolor sit sfjas.<br>Lorem ipsum dolor sit.
+                            Здесь пространство мастеров телесной терапии - через йогу и прикосновение.
+                            <br>
+                            <br>
+                            Сертифицированные специалисты в сфере йоги, массажа, тантры и стретчинга.
                         </p>
                         <button class="welcom_button sign-up_btn">
-                            Записаться прямо сейчас
+                            Записаться
                         </button>
                     </div>
                 </div>
@@ -62,20 +78,66 @@
                     <h2 class="directions_title">НАПРАВЛЕНИЯ</h2>
 
                     <div class="directions_container"> <!--флекс контейнер для направлений-->
-                        <div class="direction">
-                            <img class="direction_image" src="./imgs/yoga.jpg"></img>
+                        <div class="direction"> <!--айенгара-->
+                            <img class="direction_image" src="./imgs/yoga-photo.jpeg"></img>
                             <div class="text-about">
-                                <h3 class="direction_name">Йога</h3>
-                                <p class="direction_description">Йога айенгара - Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, inventore. Eveniet, earum aliquam.
+                                <h3 class="direction_name">Йога Айенгара</h3>
+                                <p class="direction_description">Самый физиологичный метод йоги - помог улучшить здоровье сотням тысяч людей по всему миру.</p>
+
+                                <p class="direction_description addtional_direction">
+                                Программы занятий подбираются под состояние ученика - используются специальные материаллы для более точного воздействия.
                                 </p>
+                                <button class="direction_btn-more">подробнее о направлении</button>
                                 <button class="direction_sign-up sign-up_btn">записаться</button>
                             </div>   
                         </div>
-                        <div class="direction">
+                        <div class="direction"> <!--тантра-->
                             <img class="direction_image" src="./imgs/tantra.jpg"></img>
                             <div class="text-about">
                                 <h3 class="direction_name">Тантра</h3>
-                                <p class="direction_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolor, odio quis debitis, ab nam maxime alias distinctio commodi, consequuntur laudantium voluptatum similique suscipit eius?</p>
+                                <p class="direction_description">Система разнообразных эзотерических, медитативных, контактных  и сакральных практик, корнями уходящих в глубокую древность.</p>
+
+                                <p class="direction_description addtional_direction">Занятия улучшают все сферы жизни человека:
+                                    Он становится более спокоен и концентрируется на своих точках роста, а также начинает более доброжелательно относиться к окружающим.
+                                    Соответственно, и <span>общение</span> и <span>личная</span> и <span>сексуальная</span> и <span>профессиональная</span> жизни становятся лучше.</p>
+                                <button class="direction_btn-more">подробнее о направлении</button>
+                                <button class="direction_sign-up sign-up_btn">записаться</button>
+                            </div> 
+                        </div>
+                        <div class="direction"> <!--хатха-->
+                            <img class="direction_image" src="./imgs/hatha.jpeg"></img>
+                            <div class="text-about">
+                                <h3 class="direction_name">Ха-Тха Йога</h3>
+                                <p class="direction_description">Одна из самых древних практик для поддержания здоровья суставов, позвоночника.</p>
+                                <p class="direction_description addtional_direction">Основной аспект развитие гибкости и внутреннего баланса сил.</p>
+                                <button class="direction_btn-more">подробнее о направлении</button>
+                                <button class="direction_sign-up sign-up_btn">записаться</button>
+                            </div> 
+                        </div>
+                        <div class="direction"> <!--стретчинг-->
+                            <img class="direction_image" src="./imgs/stretching.jpeg"></img>
+                            <div class="text-about">
+                                <h3 class="direction_name">Стретчинг</h3>
+                                <p class="direction_description">Комплекс упражнений направленных на улучшение гибкости, развития подвижности в суставах и эластичности мышц.</p>
+                                <p class="direction_description addtional_direction">
+                                    Данное направление полезно независимо от возраста и степени развития гибкости.
+                                    Если есть мечта сесть на шпагат - стретчинг прекрасный способ достижения цели.
+                                </p>
+                                <button class="direction_btn-more">подробнее о направлении</button>
+                                <button class="direction_sign-up sign-up_btn">записаться</button>
+                            </div> 
+                        </div>
+                        <div class="direction"> <!--массаж-->
+                            <img class="direction_image" src="./imgs/massage.jpeg"></img>
+                            <div class="text-about">
+                                <h3 class="direction_name">Массаж</h3>
+                                <p class="direction_description">                                    
+                                    Снимает мышечное напряжение, улучшает кровообращение, снижает уровень стресса и повышает общий тонус организма. 
+                                </p>
+                                <p class="direction_description addtional_direction">
+                                    Лучший способ расслабиться после напряжённого дня и подарить своему телу заботу. Наш опытный массажист предлагают различные техники, каждая из которых имеет свои уникальные преимущества.
+                                </p>
+                                <button class="direction_btn-more">подробнее о направлении</button>
                                 <button class="direction_sign-up sign-up_btn">записаться</button>
                             </div> 
                         </div>
@@ -87,17 +149,81 @@
             <div class="teachers" id="teachers">
                 <div class="teachers_container">
                     <h2 class="teachers_title">ПРЕПОДАВАТЕЛИ</h2>
+                    <div class="teacher"> <!--Надежда Гуменникова-->
+                        <div class="teacher_main">
+                            <img src="imgs/nadya_whitesmoke.png" alt="" class="teacher_photo">
+                            <div class="about_teacher">
+                                <h2 class="teacher_name">Надежда Гуменникова</h2>
+                                <p class="teacher_description">
+                                    <span class="hightliter1">Стаж занятий йогой 16 лет.</span><br>Обучение – Москва, центр йоги Айенгара «Yoga Practica».</p><br> 
+                                <p class="teacher_description">Любовь к йоге в моей жизни навсегда: потому, что это идеальный инструмент улучшения здоровья. Йога Айенгара подходит всем с ее помощью можно очень сильно изменить тело и повысить качество жизни.</p>
+                                <p class="teacher_courses_header">Пройденные курсы и семинары:</p>
+                            </div>
+                        </div>
+                        <div class="teacher_courses">
+                            <ul>
+                                <li>Федерация «Йога-практика» Региональная общественная спортивная организация г. Москва, Московский Центр йоги БКС Айенгара - Курс интенсивного заочного обучения «Первый шаг» Свидетельство № П-49511, 2010-2011 г. ( длительность курса - 1 год)</li>
+                                <li>Федерация «Йога-практика» Региональная общественная спортивная организация г. Москва, Московский центр йоги БКС Айенгара - заочный учительский курс.</li>
+                            </ul>
+                            <ul class="addtional_courses">
+                                <li>13-14 октября 2012 года семинар Кирилла Чурноуцана «Анатомическое и физиологическое воздействие асан. Основы безопасной практики. Анатомия йоги».</li>
+                                <li>31 мая 2012 - мастер-класс Е. Матвеевой «Раскрытие плечевого пояса и грудной клетки», «Хорошая осанка, верх спины»</li>
+                                <li>1-2 июня мастер-класс Е. Матвеевой «К раскрытию грудной клетки через выполнение прогибов и перевернутых поз»</li>
+                                <li>10 ноября 2012 года - мастер-класс Виталия Литвинова «Балансы-стабильность, уверенность, решительность».</li>
+                                <li>3 октября 2013 год - мастер-класс Инны Сергеевой «Важность правильной работы ног в асанах»</li>
+                                <li>Курс анатомии и физиологии в массажном центре «Сервилюкс» г. Пятигорск 2013 год</li>
+                                <li>Курс анатомии и физиологии для инструкторов аэробики и тренажерного зала</li>
+                                <li>23-24 марта 2012 г - семинар Е. Ульмасбаевой «Основы интенсивной практики»</li>
+                                <li>8 ноября 2012 года- мастер-класс Е. Матвеевой «Прогибы. Вытяжение назад».</li>
+                                <li>Курс йогатерапии Инессы Машьяновой в Ростове-на-Дону 2021-2022 г.</li>
+                                <li>Курс для инструкторов «Нео тантры» Андрей Любарского 2022 г.</li>
+                                <li>1 марта 2013 года – семинар Е. Матвеевой «Перевернутые позы»</li>
+                            </ul>
+                            <button class="courses_btn-more">посмотреть все</button>
+                        </div>
+                    </div>
+                    <div class="teacher"> <!--Гринев Виктор Валерьевич -->
+                        <div class="teacher_main"> 
+                            <img src="imgs/viktor4.jpg" alt="" class="teacher_photo left">
+                            <div class="about_teacher">
+                                <h2 class="teacher_name">Гринев Виктор Валерьевич</h2>
+                                <p class="teacher_description">Специалист по массажу с медицинским образованием. Опыт работы 12 лет.</p>
+                                <br>
+                                <p class="teacher_description">Все виды массажа для взрослых и детей (от 0 лет).<br>
+                                Индивидуальный подход к каждому, с заботой о вашем здоровье.</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="teacher">
-                        <img src="imgs/quiz_bg.jpeg" alt="" class="teacher_photo">
-                        <div class="about_teacher">
-                            <h2 class="tacher_name">Надежда Гуменникова</h2>
-                            <p class="teacher_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error obcaecati vel maxime amet quisquam magnam sit veritatis deleniti earum. Odio accusamus esse doloremque natus perferendis!</p>
+                        <div class="teacher_main">
+                            <img src="imgs/anna.jpg" alt="" class="teacher_photo">
+                            <div class="about_teacher">
+                                <h2 class="teacher_name">Анна Богданова</h2>
+                                <p class="teacher_description"><span class="hightliter1">Сертификат Introductory</span><br>
+                                    Занимаюсь йогой Айенгара с 2009 года<br>
+                                    Преподаю с 2015.</p>
+                                <p class="teacher_courses_header">Пройденные курсы и семинары:</p>
+                            </div>
+                        </div>
+                        <div class="teacher_courses">
+                            <ul>
+                                <li>Для совершенствования личной практики и преподавания посещала Институт Йоги RIMYI в г. Пуна (Индия).</li>
+                                <li>Занималась у Гиты Айенгар, Прашанта Айенгар, Абиджаты Айенгар, Фаека Бирия, Манусо Маноса, Габриэлы Джубиляро, Лоис Штайнберг, Бобби Фульц.</li>
+                                <li>Окончила 3-х годичные учительские курсы под руководством Ольги Ильинской в Москве.</li>
+                            </ul>
+                            <ul class="addtional_courses">
+                                <li>Также посещала мастер классы ведущих российских преподавателей: Ольги Ильинской, Сергея Угрюмова, Сергея Михайлова, Натальи Шустовой, Анны Самаровой, Марии Меланишиной и др.</li>
+                                <li>Изучала йога-терапию у Стефани Квирк, также посещала специализированный цикл терапевтических семинаров у Ольги Ильинской и Натальи Шустовой.</li>
+                                <li>С 2016 преподавала в Студии йоги Айенгара под руководством Ольги Ильинской в Москве.</li>
+                                
+                            </ul>
+                            <button class="courses_btn-more">посмотреть все</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="tours" id="tours">
+            <!-- <div class="tours" id="tours">
                 <div class="tours_container">
                     <h2 class="tours_title">ТУРЫ</h2>
                     <div class="tour">
@@ -108,7 +234,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="modal">
                 <div class="modal_window">
@@ -124,9 +250,9 @@
                             <label for="#name">Ваше имя</label>
                         </div>
                         <label class="politic_agree">
-                            
-                            Я согласен с политикой конфиденциальности и обработки данных
-                            <input type="checkbox" class="fa-solid fa-check" id="checkbox"/>
+                            Я согласен(a) с политикой конфиденциальности и обработки данных
+                            <input type="checkbox" name="agree" class="fa-solid fa-check" id="checkbox"
+                                   value="true"/>
                         </label>
                         <button id="modalWindowButton" type="submit">отправить заявку</button>
                     </form>
@@ -138,9 +264,9 @@
             <div class="footer_container">
                 <div class="footer_contacts">
                     <h2>Контакты</h2>
-                    <a href="tel:8(928)821-75-14" class="phone">8(928)821-75-14</a>
-                    <p>Пятигорск, ул. Московская 78, к1 </p>
-                    <p>Отвечаем ежедневно<br> с 10:00 до 21:00</p>
+                    <p>тц «Университи Молл»<br>ул. Панагюриште 2, 2 этаж 213 зал </p>
+                    <a href="tel:8(928)821-75-14" class="phone">+7(988)759-29-47</a>
+                    <p>Отвечаем ежедневно<br>с 10:00 до 21:00</p>
                 </div>
                 <div class="footer_links">
                     <a href="https://instagram.com/terra___yoga" class="fa-brands fa-instagram"></a>
@@ -153,11 +279,14 @@
                     <a href="#teachers">Преподаватели</a>
                     <!-- <a href="#tours">Туры</a> -->
                 </div>
-                <div class="footer_personal-data">Ссылка на политику конфиденциальности</div>
+                <a href="./Privacy policy.docx" target="__blanck" class="footer_personal-data">Ссылка на политику конфиденциальности</a>
+                <div class="footer_copyright">© 2024 YOGA MasterSKYa</div>
+                <div id="map"></div>
             </div>
         </footer>
     </div>
     <script src="scripts/script.js"></script>
+    <script src="scripts/map.js"></script>
     <script src="https://kit.fontawesome.com/6324adcb34.js" crossorigin="anonymous"></script>
 
 </body>

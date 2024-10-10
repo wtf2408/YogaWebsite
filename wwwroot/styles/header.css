@@ -16,8 +16,12 @@
     position: relative; /*для бургера, у род. должен быть relative чтобы absolute был относительно его*/
 }
 .header_logo {
+    font-family: "El Messiri", sans-serif;
     font-size: 1.5rem;
     color: white;
+}
+.header_logo span.upper {
+    color: #74C0FC;
 }
 .header_menu_link:not(:last-child){
     margin: 0 20px 0 0;
@@ -28,7 +32,8 @@
     position: relative;
 }
 .messengers {
-    display: none;
+    /* display: none; */
+    display: inline-block;
 }
 .telegram {
     /* transform: scale(1.5); */

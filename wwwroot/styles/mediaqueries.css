@@ -34,11 +34,15 @@
     .header_menu_link::before {
         display: none;
     }
+    .messengers {
+        margin: 0;
+        padding: 1rem 0;
+    }
     .telegram {
-        font-size: 2rem
+        font-size: 1.9rem
     }
     .whatsapp {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
     }
     /*END MENU*/
 
@@ -62,7 +66,7 @@
     .welcom{
         padding: 0;
         margin: 0;
-        background: url('../imgs/welcom_bg.jpg') 50% 0/cover no-repeat;
+        background: url('../imgs/freepik-export-20240930064210SiNN1.jpeg') 50% 0/cover no-repeat;
     }
     .welcom_container{
         height: 80vh;
@@ -70,22 +74,17 @@
     }
     /*END WELCOM*/
 
-    /*DIRECTIONS*/
-    .directions_container {
-        justify-content: center;
-    }
-    .direction {
-        width: 70%;
-    }
-    /* .direction_image {
-        height: 40%;
-    } */
-    /*END DIRECTIONS*/
+   /*DIRECTIONS*/
+   .direction {
+        width: 48%;
+   }
+   /*END DIRECTIONS*/
 
     /*FOOTER*/
     .footer_container {
         flex-direction: column;
     }
+    .footer_contacts {flex-direction: column;}
     .footer_contacts, .footer_nav {
         font-size: 1.1rem;
         display: flex;
@@ -117,21 +116,24 @@
         --base-fs: 12px;
     }
     /*HEADER*/
-    .messengers {
-        display: block;
-        margin: 0;
-        padding: 1rem 0;
+    .telegram {
+        font-size: 2rem
+    }
+    .whatsapp {
+        font-size: 2.2rem;
     }
     /*END HEADER*/
+
     /*WELCOM*/
-    .welcom_content {
-        padding: 6rem 0;
-    }
     
     /*END WELCOM*/
     /*DIRECTIONS*/
+     .directions_container {
+        justify-content: center;
+    }
     .direction {
         width: 80%;
+        height: auto;
     }
     /*END DIRECTIONS*/
 
@@ -144,7 +146,10 @@
 {
 
     .welcom_content{
-        align-items: center;
+        width: 100%;
+    }
+    .welcom_title {
+        text-align: center;
     }
      /*DIRECTIONS*/
      .direction {
@@ -154,7 +159,7 @@
 
     /*TEACHERS*/
 
-    .teacher {
+    .teacher_main {
         flex-wrap: wrap;
     }
     .teacher_photo {
@@ -162,9 +167,20 @@
         height: 280px;
         margin-bottom: 2rem;
         order: 1;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
     .about_teacher {
         padding: 0;
+    }
+    .teacher_courses_header {
+        margin-top: 2rem;
+        border-left: 0;
+        padding-left: 0;
+    }
+    .teacher_courses {
+        padding: 0;
+    }
+    .teacher_name {
         text-align: center;
     }
     /*END TEACHERS*/
@@ -187,13 +203,19 @@
 }
 @media screen and (max-width:540px)
 {
-    /* :root{
-        --base-fs: 10px;
-    } */
-    .welcom_content{
+    /*WELCOM*/
+    .welcom_description {
         width: 100%;
     }
+    .welcom_button {
+        width: 80%;
+        align-self: center;
+    }
+    /*END WELCOM*/
     /*DIRECTIONS*/
+    .direction {
+        width: 100%;
+    }
     .direction_sign-up{
         margin: auto;
     }
@@ -207,13 +229,12 @@
 }
 @media screen and (max-width:440px)
 {
-    :root {
-        --base-fs: 11px;
-    } 
-     /*DIRECTIONS*/
-     .direction {
+    /*WELCOM*/
+    .welcom_button {
         width: 100%;
     }
+    /*END WELCOM*/
+     /*DIRECTIONS*/
     .directions_content-width {
         padding: 3rem 1.5rem;
     }
