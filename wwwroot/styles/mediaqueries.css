@@ -167,7 +167,7 @@
         height: 280px;
         margin-bottom: 2rem;
         order: 1;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
     }
     .about_teacher {
         padding: 0;
@@ -178,6 +178,7 @@
         padding-left: 0;
     }
     .teacher_courses {
+        margin-top: 0;
         padding: 0;
     }
     .teacher_name {
@@ -223,6 +224,9 @@
     /*FOOTER*/
     .footer_container {
         padding: 6rem 2rem 3rem 2rem;  
+    }
+    #map {
+        height: 300px;
     }
     /*END FOOTER*/
 

@@ -5,10 +5,10 @@ ymaps.ready(() => {
     var map = new ymaps.Map("map", {
         center: coordinates,
         zoom: 18,
-        controls: ['geolocationControl', 'zoomControl']
+        controls: ['zoomControl'] // 'geolocationControl'
     },
     {
-        geolocationControlFloat: 'right',
+        // geolocationControlFloat: 'right',
         zoomControlFloat: 'right',
         zoomControlSize: 'small'
 

@@ -195,10 +195,10 @@
     object-fit: cover;
     order: 2;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
-    box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2); */
 }
 .teacher_photo.left {
-    box-shadow: -3px 3px 2px 1px rgba(0, 0, 0, 0.2);
+    /* box-shadow: -3px 3px 2px 1px rgba(0, 0, 0, 0.2); */
     order: 1;
 }
 .about_teacher {
@@ -217,6 +217,15 @@
     font-size: 1.3rem;
     padding-left: 1rem;
 }
+.teacher_description ~ ul {
+    list-style-type: none;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+.teacher_description ~ ul li {
+    margin: 6px 0;
+    padding-left: 1rem; 
+}
 .teacher_courses_header {
     margin-top: auto;
     font-weight: 600;
@@ -227,6 +236,7 @@
 }
 .teacher_courses {
     padding: 0 2rem;
+    margin-top: 2rem;
 }
 .teacher_courses ul {
     list-style-type: none;
