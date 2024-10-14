@@ -10,36 +10,24 @@ namespace YogaWebsite.Controllers
     public class SignUpController : Controller
     {
         private string pathPossibleClinets;
-        public SignUpController()
+        private YogamasterskyaContext context;
+        public SignUpController(YogamasterskyaContext context)
         {
-            pathPossibleClinets = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "possibleClients.json");
+            this.context = context;
         }
         [HttpPost][Route("/signup")]
         public async Task FormHandler(string name, string phone, bool agree)
         {
-            FileInfo fileInfo = new(pathPossibleClinets);
-            using var fs = fileInfo.Open(FileMode.OpenOrCreate);
-            List<Client> clients; 
-            try
-            {
-                clients = await JsonSerializer.DeserializeAsync<List<Client>>(fs) ?? new List<Client>();  
-            }
-            catch (System.Text.Json.JsonException)
-            {
-                clients = new();
-            }
-            var client = new Client(name, phone, agree);
-            if (!clients.Contains(client)) {
-                clients.Add(client);
-                fs.Position = 0;
-                await JsonSerializer.SerializeAsync<List<Client>>(fs, clients, 
-                new JsonSerializerOptions() {
-                    WriteIndented = true,
+            if (agree) {
+                context.PossibleClients.Add(new PossibleClient()
+                {
+                    Id = context.PossibleClients.Select(pc => pc.Id).Max() + 1,
+                    Name = name,
+                    Phone = phone
                 });
-                fs.Flush();
+                context.SaveChanges();
             }
         }
 
     }
-    record Client(string name, string phone, bool agree);
 }
