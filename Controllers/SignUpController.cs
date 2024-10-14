@@ -23,7 +23,7 @@ namespace YogaWebsite.Controllers
                 {
                     Id = context.PossibleClients.Select(pc => pc.Id).Max() + 1,
                     Name = name,
-                    Phone = phone
+                    Phone = phone[0] == '+' ? phone : ("+7" + phone[1..])
                 });
                 context.SaveChanges();
             }
