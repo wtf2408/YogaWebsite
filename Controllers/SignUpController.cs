@@ -18,10 +18,11 @@ namespace YogaWebsite.Controllers
         [HttpPost][Route("/signup")]
         public async Task FormHandler(string name, string phone, bool agree)
         {
-            if (agree) {
+            if (agree && context.Database.CanConnect()) {
                 context.PossibleClients.Add(new PossibleClient()
                 {
-                    Id = context.PossibleClients.Select(pc => pc.Id).Max() + 1,
+                    Id = context.PossibleClients.ToList().Count == 0 ? 1 :
+                         context.PossibleClients.Select(pc => pc.Id).Max() + 1,
                     Name = name,
                     Phone = phone[0] == '+' ? phone : ("+7" + phone[1..])
                 });
