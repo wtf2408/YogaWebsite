@@ -190,10 +190,13 @@
 }
 
 .teacher_photo {
+    /* mask-image: url(../imgs/mask.png);
+    mask-size: cover; */
     border-radius: 20px;
     width: 45%;
     object-fit: cover;
     order: 2;
+    min-height: 400px;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
     /* box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2); */
 }
