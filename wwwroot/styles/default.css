@@ -20,6 +20,9 @@ button, input {
     --dark-gray: #262626;
     --base-fs: 15px;
     --default-width: 1200px;
+    --iyengar-color: blueviolet;
+    --hatha-color: rgb(209, 127, 4); 
+    --stretching-color: rgb(51 139 163);
 }
 html, body{
     overflow-x: hidden;

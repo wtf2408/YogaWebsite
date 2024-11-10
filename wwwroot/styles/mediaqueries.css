@@ -243,12 +243,12 @@
     /*END WELCOM*/
      /*DIRECTIONS*/
     .directions_content-width {
-        padding: 3rem 1.5rem;
+        padding: 3rem 2rem;
     }
     /*END DIRECTIONS*/
     /*TEACHERS*/
     .teachers_container {
-        padding: 3rem 1.5rem 4rem 1.5rem;
+        padding: 3rem 2rem 4rem 2rem;
     }
     /*END TEACHERS*/
     /*TOURS*/
@@ -258,7 +258,28 @@
     /*END TOURS*/
     /*FOOTER*/
     .footer_container {
-        padding: 6rem 1.5rem 2rem 1.5rem;  
+        padding: 6rem 2rem 2rem 2rem;  
     }   
     /*END FOOTER*/
+}
+@media screen and (max-width:350px) {
+    /*DIRECTIONS*/
+    .directions_content-width {
+        padding: 3rem 1rem;
+    }
+    /*END DIRECTIONS*/
+    /*TEACHERS*/
+    .teachers_container {
+        padding: 3rem 1rem 4rem 1rem;
+    }
+    /*END TEACHERS*/
+    /*TOURS*/
+    .tours_container {
+        padding: 2rem;
+    }
+    /*END TOURS*/
+    /*FOOTER*/
+    .footer_container {
+        padding: 6rem 1rem 2rem 1rem;  
+    } 
 }

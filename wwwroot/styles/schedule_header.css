@@ -1,0 +1,25 @@
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--dark-gray);
+    z-index: 1;
+}
+.header_container {
+    max-width: var(--default-width); 
+    height: 7vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    position: relative; /*для бургера, у род. должен быть relative чтобы absolute был относительно его*/
+}
+.header_logo {
+    font-family: "El Messiri", sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+.header_logo span.upper {
+    color: #74C0FC;
+}
