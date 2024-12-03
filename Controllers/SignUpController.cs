@@ -36,7 +36,8 @@ namespace YogaWebsite.Controllers
                     Id = possibleClients.Count == 0 ? 1 :
                         possibleClients.Select(pc => pc.Id).Max() + 1,
                     Name = name,
-                    Phone = phone[0] == '+' ? phone : ("+7" + phone[1..])
+                    Phone = phone[0] == '+' ? phone : ("+7" + phone[1..]),
+                    CreatedAt = DateTime.Now
                 });
 
                 using (FileStream fs = new FileStream(POSSIBLE_CLIENTS_PATH, FileMode.Truncate, FileAccess.Write, FileShare.None))
