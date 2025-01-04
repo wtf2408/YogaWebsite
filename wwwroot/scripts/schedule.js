@@ -7,10 +7,10 @@ const teachersBody = document.getElementsByClassName('teacher__body');
 const mediaQuery = window.matchMedia("(max-width: 768px)");
 const lessonsCount = {
     'ПН': 2,
-    'ВТ': 3,
+    'ВТ': 2,
     'СР': 2,
     'ЧТ': 2,
-    'ПТ': 2,
+    'ПТ': 1,
     'СБ': 1,
 }
 function handleMediaQueryChange(event) {
@@ -48,6 +48,3 @@ handleMediaQueryChange(mediaQuery);
 mediaQuery.addEventListener("change", handleMediaQueryChange);
 
 
-// function showMoreInfo(sender) {
-    
-// }

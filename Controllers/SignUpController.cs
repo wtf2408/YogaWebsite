@@ -9,11 +9,12 @@ namespace YogaWebsite.Controllers
 {
     public class SignUpController : Controller
     {
-        private readonly string POSSIBLE_CLIENTS_PATH = @"/var/YogaMasterskyaStorage/possibleClients.json"; 
+        private readonly IConfiguration configuration;
         private YogamasterskyaContext context;
-        public SignUpController(YogamasterskyaContext context)
+        public SignUpController(YogamasterskyaContext context, IConfiguration configuration)
         {
             this.context = context;
+            this.configuration = configuration;
             
         }
         [HttpPost][Route("/signup")]
@@ -23,8 +24,10 @@ namespace YogaWebsite.Controllers
             {
                 string clientsJson;
                 List<PossibleClient> possibleClients;
+                var path = configuration["Paths:PossibleClientsPath"]?.ToString() 
+                ?? throw new NullReferenceException("Path to possible clients can't be null");
 
-                using (FileStream fs = new FileStream(POSSIBLE_CLIENTS_PATH, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+                using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite))
                 using (StreamReader reader = new StreamReader(fs))
                 {
                     clientsJson = await reader.ReadToEndAsync();
@@ -40,10 +43,10 @@ namespace YogaWebsite.Controllers
                     CreatedAt = DateTime.Now
                 });
 
-                using (FileStream fs = new FileStream(POSSIBLE_CLIENTS_PATH, FileMode.Truncate, FileAccess.Write, FileShare.None))
+                using (FileStream fs = new FileStream(path, FileMode.Truncate, FileAccess.Write, FileShare.None))
                 using (StreamWriter writer = new StreamWriter(fs))
                 {
-                    clientsJson = JsonConvert.SerializeObject(possibleClients);
+                    clientsJson = JsonConvert.SerializeObject(possibleClients, Formatting.Indented);
                     await writer.WriteAsync(clientsJson);
                 }
             }

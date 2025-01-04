@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -8,7 +12,7 @@
 .schedule_container {
     margin: 3rem 0;
     overflow-y: auto;
-    height: 500px;
+    height: 510px;
     border-bottom: 1px solid #ddd;
 }
 .schedule__header {
